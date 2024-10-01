@@ -14,7 +14,7 @@ const colorList = <Color>[
 
 class AppTheme {
   final bool useMaterial3;
-  final int selectedColor;
+  int selectedColor;
   final bool isDarkmode;
 
   AppTheme({
