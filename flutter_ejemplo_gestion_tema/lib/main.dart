@@ -10,7 +10,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appTheme = AppTheme(selectedColor: 4, isDarkmode: false);
+    final appTheme = AppTheme(selectedColor: 1, isDarkmode: false);
 
     return MaterialApp(
       theme: appTheme.getTheme(),
@@ -22,9 +22,8 @@ class MainApp extends StatelessWidget {
           ),
         ),
         body: Center(
-          child: Text('Hello World!',
-              style: Theme.of(context).textTheme.displayLarge),
-        ),
+            child: Text('Hello hola!',
+                style: appTheme.getTheme().textTheme.displayLarge)),
       ),
     );
   }

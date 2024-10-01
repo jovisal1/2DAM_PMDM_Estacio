@@ -32,7 +32,7 @@ class AppTheme {
             iconTheme: const IconThemeData(color: Colors.white),
             titleTextStyle: const TextStyle(color: Colors.white, fontSize: 20)),
         textTheme: const TextTheme(
-          displayLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+          displayLarge: TextStyle(fontSize: 45, color: Colors.black),
           bodyLarge: TextStyle(fontSize: 18, color: Colors.black87),
         ),
       );
