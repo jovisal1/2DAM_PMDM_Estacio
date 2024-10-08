@@ -26,7 +26,7 @@ class _MyFormState extends State<FormControllerExample> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            TextField(
+            TextFormField(
               controller: _nameController,
               decoration: const InputDecoration(labelText: 'Nombre'),
             ),

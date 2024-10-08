@@ -10,6 +10,8 @@ class FormExample extends StatefulWidget {
 class _FormExampleState extends State<FormExample> {
   //La clave contiene el FormState
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  bool isChecked = false;
+  String? _selectedValue;
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +34,20 @@ class _FormExampleState extends State<FormExample> {
                     return null;
                   }),
               const SizedBox(height: 10),
+              CheckboxListTile(
+                value: isChecked,
+                title: const Text('Animate Slowly'),
+                activeColor: Colors.green,
+                onChanged: (bool? value) {
+                  setState(() {
+                    isChecked = value!;
+                  });
+                },
+              ),
               ElevatedButton(
                 onPressed: () {
                   String mensajeRespuesta = "Todo correcto!";
-                  if (!_formKey.currentState!.validate()) {
+                  if (_formKey.currentState!.validate() == false) {
                     mensajeRespuesta = "Algún campo no es válido";
                   }
                   ScaffoldMessenger.of(context).showSnackBar(
@@ -43,6 +55,41 @@ class _FormExampleState extends State<FormExample> {
                   );
                 },
                 child: const Text('Enviar'),
+              ),
+              const SizedBox(height: 10),
+              DropdownButtonFormField<String>(
+                  value: _selectedValue,
+                  hint: const Text('Seleccione una opción'),
+                  decoration: const InputDecoration(
+                    labelText: 'Opción',
+                    // border: OutlineInputBorder(),
+                  ),
+                  items: const [
+                    DropdownMenuItem(
+                        value: 'opcion1', child: Icon(Icons.abc_rounded)),
+                    DropdownMenuItem(value: 'opcion2', child: Text('Opción 2')),
+                    DropdownMenuItem(value: 'opcion3', child: Text('Opción 3')),
+                  ],
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      _selectedValue = newValue;
+                    });
+                  },
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Por favor seleccione una opción';
+                    }
+                    return null;
+                  }),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    // Si el formulario es válido, guardar los datos
+                    _formKey.currentState!.save();
+                  }
+                },
+                child: const Text('Guardar'),
               ),
             ]),
       ),
