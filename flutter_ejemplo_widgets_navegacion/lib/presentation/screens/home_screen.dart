@@ -47,6 +47,12 @@ class HomeScreen extends StatelessWidget {
                   },
                   child: const Text("PageView"),
                 ),
+                TextButton(
+                  onPressed: () {
+                    context.push("/Hero");
+                  },
+                  child: const Text("Hero"),
+                ),
               ],
             ),
           ),

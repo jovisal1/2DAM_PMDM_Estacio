@@ -33,5 +33,10 @@ final GoRouter router = GoRouter(
       path: '/PageView',
       builder: (context, state) => const PageViewExampleScreen(),
     ),
+    GoRoute(
+      name: 'Hero',
+      path: '/Hero',
+      builder: (context, state) => const HeroExampleScreen(),
+    ),
   ],
 );

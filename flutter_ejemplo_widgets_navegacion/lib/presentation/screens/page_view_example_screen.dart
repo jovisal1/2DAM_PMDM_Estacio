@@ -21,7 +21,7 @@ class _PageViewWithControllerExampleState extends State<PageViewExampleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('PageView with Controller')),
+      appBar: AppBar(title: const Text('PageView con Controller')),
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: [
@@ -32,17 +32,18 @@ class _PageViewWithControllerExampleState extends State<PageViewExampleScreen> {
                 setState(() {
                   _currentPage = index;
                 });
+                debugPrint("Estamos en la página $_currentPage");
               },
               children: <Widget>[
                 Container(
                     color: Colors.red,
-                    child: const Center(child: Text('Page 1'))),
+                    child: const Center(child: Text('Página 1'))),
                 Container(
                     color: Colors.green,
-                    child: const Center(child: Text('Page 2'))),
+                    child: const Center(child: Text('Página 2'))),
                 Container(
                     color: Colors.blue,
-                    child: const Center(child: Text('Page 3'))),
+                    child: const Center(child: Text('Página 3'))),
               ],
             ),
           ),
@@ -58,7 +59,7 @@ class _PageViewWithControllerExampleState extends State<PageViewExampleScreen> {
                       curve: Curves.easeInOut,
                     );
                   },
-                  child: const Text('Previous'),
+                  child: const Text('Anterior'),
                 ),
                 const SizedBox(width: 16),
                 ElevatedButton(
@@ -68,7 +69,7 @@ class _PageViewWithControllerExampleState extends State<PageViewExampleScreen> {
                       curve: Curves.easeInOut,
                     );
                   },
-                  child: const Text('Next'),
+                  child: const Text('Siguiente'),
                 ),
               ],
             ),
