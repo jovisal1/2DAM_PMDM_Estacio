@@ -66,8 +66,8 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Future<void> _mostrarSimpleDialog(BuildContext context) async {
-    return showDialog<void>(
+  Future<String?> _mostrarSimpleDialog(BuildContext context) async {
+    return showDialog<String>(
       context: context,
       builder: (BuildContext context) {
         return const DialogoSimple();
