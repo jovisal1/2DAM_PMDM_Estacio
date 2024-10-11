@@ -18,15 +18,18 @@ class HomeScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () async {
                 // Mostrar el AlertDialog y obtener el valor de retorno
-                final resultado = await _mostrarAlerta(context);
+                final String resultado =
+                    await _mostrarAlerta(context) ?? "Sin respuesta";
                 debugPrint(resultado);
               },
               child: const Text('Mostrar Alerta'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
-                _mostrarSimpleDialog(context);
+              onPressed: () async {
+                final String resultado =
+                    await _mostrarSimpleDialog(context) ?? "No seleccionado";
+                debugPrint(resultado);
               },
               child: const Text('Abrir SimpleDialog'),
             ),
@@ -58,7 +61,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   Future<String?> _mostrarAlerta(BuildContext context) async {
-    return await showDialog<String>(
+    return showDialog<String>(
       context: context,
       builder: (BuildContext context) {
         return const DialogAlerta();
