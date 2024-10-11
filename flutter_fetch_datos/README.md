@@ -8,7 +8,7 @@ Proyecto de ejemplo en el que obtenemos datos de la api de jsonplaceholder. La e
 
 	- *UseCase*: Clases que encapsulan la lógica particular de un caso de uso de la aplicación (por ejemplo, obtener toda la información de los Álbums)
 	
-	![Picture](https://i0.wp.com/resocoder.com/wp-content/uploads/2019/08/domain-layer-diagram.png?w=141&ssl=1){style="display: block; margin: 0 auto"}
+	![Picture](https://i0.wp.com/resocoder.com/wp-content/uploads/2019/08/domain-layer-diagram.png?w=141&ssl=1)
 	
 	-  *Entities*: Objetos con los que nuestra aplicación trabaja (Album)
 	- *Repositories*: Clases abstractas que definen la funcionalidad esperada de otras capas (la de datos)
@@ -20,13 +20,13 @@ Proyecto de ejemplo en el que obtenemos datos de la api de jsonplaceholder. La e
 	- *Datasources*: Clases encargadas de implementar la lógica necesaria para obtener la información de la fuente (API, Base de Datos, etc)
 	- *Models*: Extensiones de Entidades con la adición de miembros adicionales que pueden ser dependientes de la plataforma. Por ejemplo, en el caso de analizar objetos JSON de la respuesta del servidor, esto puede agregar alguna funcionalidad específica (toJson, fromJson) o campos adicionales para la base de datos.
 
-![Picture](https://i0.wp.com/resocoder.com/wp-content/uploads/2019/08/data-layer-diagram.png?w=329&ssl=1){style="display: block; margin: 0 auto"}
+![Picture](https://i0.wp.com/resocoder.com/wp-content/uploads/2019/08/data-layer-diagram.png?w=329&ssl=1)
 
 La comunicación entre estas capas se realiza a través de interfaces y contratos, lo que permite una mayor flexibilidad y desacoplamiento. Por ejemplo, la capa de Presentación interactúa con la capa de Dominio a través de los casos de uso, y la capa de Datos implementa los contratos definidos en la capa de Dominio.
 
   
 
-![Picture](https://i0.wp.com/resocoder.com/wp-content/uploads/2019/08/Clean-Architecture-Flutter-Diagram.png?w=556&ssl=1){style="display: block; margin: 0 auto"}
+![Picture](https://i0.wp.com/resocoder.com/wp-content/uploads/2019/08/Clean-Architecture-Flutter-Diagram.png?w=556&ssl=1)
 
   
 
