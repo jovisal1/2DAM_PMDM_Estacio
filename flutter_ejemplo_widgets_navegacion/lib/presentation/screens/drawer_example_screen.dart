@@ -9,7 +9,7 @@ class DrawerExampleScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Drawer Example'),
       ),
-      endDrawer: Drawer(
+      drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
