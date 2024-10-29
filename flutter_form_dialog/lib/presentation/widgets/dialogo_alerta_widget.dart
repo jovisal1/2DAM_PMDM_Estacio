@@ -19,7 +19,8 @@ class DialogAlerta extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            Navigator.pop(context, 'Aceptar'); // Retornar 'Aceptar'
+            Navigator.pop(context, 'Aceptar');
+            // Retornar 'Aceptar'
           },
           child: const Text('Aceptar'),
         ),
