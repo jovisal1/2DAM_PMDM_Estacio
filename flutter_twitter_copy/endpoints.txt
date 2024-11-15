@@ -1,0 +1,20 @@
+GET - Obtener todos los usuarios -> http://localhost:3000/api/users 
+POST - Login -> http://localhost:3000/api/users/login 
+POST - Modificar usuario -> http://localhost:3000/api/users/ID_USER/update
+GET - Obtener datos de usuario -> http://localhost:3000/api/users/ID_USER
+
+POST - Añadir seguidores a un usuario ->  http://localhost:3000/api/users/ID_USER/follow
+        - followerId -> id de usuario a añadir como seguidor
+GET - Obtener los tweets que puede visualizar un usuario -> http://localhost:3000/api/tweets?userId=ID_USER
+POST - Crear un tweet -> http://localhost:3000/api/tweets
+        - userId -> ID_USER -> Id del usuario que crea el tweet
+        - content ->  TEXTO_TWEET -> Texto del tweet
+        - image -> IMAGEN DEL TWEET
+POST - Dar like a un tweet ->  http://localhost:3000/api/tweets/ID_TWEET/like
+        - userId -> ID_USER -> Id del usuario que da el like
+GET - Obtener posts de gente que sigue un usuario -> http://localhost:3000/api/tweets?userId=ID_USUARIO
+GET - Obtener todos los tweets -> http://localhost:3000/api/tweets
+DELETE - Eliminar un tweet -> http://localhost:3000/api/tweets/ID_TWEET
+POST - Modificar un tweet ->  http://localhost:3000/api/tweets/ID_TWEET/update
+        - content ->  TEXTO_TWEET -> Texto del tweet
+        - image -> IMAGEN DEL TWEET
