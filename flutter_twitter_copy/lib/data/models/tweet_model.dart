@@ -16,7 +16,7 @@ class TweetModel extends Tweet {
       userId: json['userId'],
       content: json['content'],
       createdAt: DateTime.parse(json['createdAt']),
-      likes: json['likes'],
+      likes: json['likes'] ?? 0,
       image: json['image'],
     );
   }
