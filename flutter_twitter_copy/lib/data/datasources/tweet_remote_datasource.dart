@@ -70,7 +70,7 @@ class TweetRemoteDataSource {
 
   Future<List<dynamic>> getFollowUsersTweets(String userId) async {
     final response = await http.get(
-      Uri.parse('$_baseUrl/tweets?userId=$userId'),
+      Uri.parse('$_baseUrl/tweets/tweets?userId=$userId'),
       headers: {'Content-Type': 'application/json'},
     );
 
