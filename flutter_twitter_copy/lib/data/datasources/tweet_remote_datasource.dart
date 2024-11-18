@@ -70,7 +70,7 @@ class TweetRemoteDataSource {
 
   Future<List<dynamic>> getFollowUsersTweets(String userId) async {
     final response = await http.get(
-      Uri.parse('http://localhost:3000/api/tweets/tweets?userId=$userId'),
+      Uri.parse('$_baseUrl/tweets?userId=$userId'),
       headers: {'Content-Type': 'application/json'},
     );
 
@@ -79,6 +79,20 @@ class TweetRemoteDataSource {
     } else {
       throw Exception(
           'Fallo al obtener los tweets del usuario: ${response.body}');
+    }
+  }
+
+  Future<bool> followUser(String userToFollow, String userId) async {
+    final response = await http.post(
+      Uri.parse('$_baseUrl/users/$userToFollow/update'),
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode({'userId': userId}),
+    );
+
+    if (response.statusCode == 200) {
+      return json.decode(response.body);
+    } else {
+      throw Exception('Fallo al seguir a un usuario: ${response.body}');
     }
   }
 }

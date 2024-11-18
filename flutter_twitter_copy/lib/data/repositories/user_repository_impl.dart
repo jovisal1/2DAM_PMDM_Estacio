@@ -57,4 +57,19 @@ class UserRepositoryImpl implements UserRepository {
           Exception("Error al verificar si el usuario está logueado: $e"));
     }
   }
+
+  @override
+  Future<Either<String, List<User>>> getAllUsers() async {
+    try {
+      final response = await remoteDataSource.getAllUsers();
+      final List<User> users = response.entries.map((entry) {
+        final Map<String, dynamic> userJson =
+            entry.value as Map<String, dynamic>;
+        return UserModel.fromJson(userJson);
+      }).toList();
+      return Right(users);
+    } catch (e) {
+      return Left('Error obteniendo información de los usuarios: $e');
+    }
+  }
 }

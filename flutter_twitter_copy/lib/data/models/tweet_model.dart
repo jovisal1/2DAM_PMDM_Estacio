@@ -8,6 +8,7 @@ class TweetModel extends Tweet {
     required super.createdAt,
     required super.likes,
     super.image,
+    super.userAvatar,
   });
 
   factory TweetModel.fromJson(Map<String, dynamic> json) {
@@ -16,8 +17,9 @@ class TweetModel extends Tweet {
       userId: json['userId'],
       content: json['content'],
       createdAt: DateTime.parse(json['createdAt']),
-      likes: json['likes'],
+      likes: json['likes'] ?? [],
       image: json['image'],
+      userAvatar: json['userAvatar'],
     );
   }
 }

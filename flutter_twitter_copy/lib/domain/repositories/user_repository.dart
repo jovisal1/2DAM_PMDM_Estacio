@@ -10,4 +10,6 @@ abstract class UserRepository {
       String userId, String? username, String? avatar);
 
   Future<Either<Exception, bool>> isLoggedIn();
+
+  Future<Either<String, List<User>>> getAllUsers();
 }

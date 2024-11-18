@@ -15,4 +15,6 @@ abstract class TweetRepository {
       String userId, String? content, String? image);
 
   Future<Either<String, List<Tweet>>> getFollowUsersTweets(String userId);
+
+  Future<Either<String, bool>> followUser(String userToFollow, String userId);
 }

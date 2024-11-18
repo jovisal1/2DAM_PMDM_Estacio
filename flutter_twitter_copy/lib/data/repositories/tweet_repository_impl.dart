@@ -75,4 +75,15 @@ class TweetRepositoryImpl implements TweetRepository {
       return Left('Fallo al obtener los tweets: $e');
     }
   }
+
+  @override
+  Future<Either<String, bool>> followUser(
+      String userToFollow, String userId) async {
+    try {
+      final response = await remoteDataSource.followUser(userToFollow, userId);
+      return Right(response);
+    } catch (e) {
+      return Left('Fallo al obtener los tweets: $e');
+    }
+  }
 }

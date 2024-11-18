@@ -5,7 +5,8 @@ class UserModel extends User {
     required super.id,
     required super.username,
     required super.following,
-    required super.avatar,
+    super.avatar,
+    // required super.password,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
@@ -13,7 +14,8 @@ class UserModel extends User {
       id: json['id'] as String,
       username: json['username'] as String,
       following: List<String>.from(json['following'] ?? []),
-      avatar: json['avatar'] as String,
+      avatar: json['avatar'] as String? ?? "NO_AVATAR",
+      // password: json['password'] as String,
     );
   }
 
@@ -23,6 +25,7 @@ class UserModel extends User {
       'username': username,
       'following': following,
       'avatar': avatar,
+      // 'password': password,
     };
   }
 }

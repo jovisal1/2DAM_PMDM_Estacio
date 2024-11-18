@@ -50,4 +50,18 @@ class UserRemoteDatasource {
           'Fallo al actualizar la información del usuario: ${response.body}');
     }
   }
+
+  Future<Map<String, dynamic>> getAllUsers() async {
+    final response = await http.get(
+      Uri.parse('$_baseUrl/users'),
+      headers: {'Content-Type': 'application/json'},
+    );
+
+    if (response.statusCode == 200) {
+      return json.decode(response.body);
+    } else {
+      throw Exception(
+          'Fallo al obtener la información de los usuarios: ${response.body}');
+    }
+  }
 }
