@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "847482387989",
+    "firebase_url": "https://gallery-app-dam-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "gallery-app-dam",
+    "storage_bucket": "gallery-app-dam.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847482387989:android:f9fc88da99e2c4405fd81c",
+        "android_client_info": {
+          "package_name": "com.firebaseexamples.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh8Dhm09GYsOBfLNfJrx7y-m8hq4Oxuac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847482387989:android:ca98e82ae32fc3e25fd81c",
+        "android_client_info": {
+          "package_name": "com.firebaseexamples.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh8Dhm09GYsOBfLNfJrx7y-m8hq4Oxuac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847482387989:android:41f53224ac6aab065fd81c",
+        "android_client_info": {
+          "package_name": "com.jovisal1.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh8Dhm09GYsOBfLNfJrx7y-m8hq4Oxuac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
