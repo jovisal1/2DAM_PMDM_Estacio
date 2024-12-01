@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_firebase_login/core/failure.dart';
 import 'package:flutter_firebase_login/core/use_case.dart';
+import 'package:flutter_firebase_login/domain/entities/user_entity.dart';
 import '../repositories/sign_in_repository.dart';
 
 class SigninUserUseCase implements UseCase<void, LoginParams> {
@@ -8,7 +9,7 @@ class SigninUserUseCase implements UseCase<void, LoginParams> {
   SigninUserUseCase(this.repository);
 
   @override
-  Future<Either<Failure, void>> call(LoginParams params) async {
+  Future<Either<Failure, UserEntity>> call(LoginParams params) async {
     return repository.signIn(params.email, params.password);
   }
 }

@@ -2,6 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_firebase_login/core/failure.dart';
 import 'package:flutter_firebase_login/data/datasources/firebase_auth_datasource.dart';
 import 'package:flutter_firebase_login/data/models/user_model.dart';
+import 'package:flutter_firebase_login/domain/entities/user_entity.dart';
 import 'package:flutter_firebase_login/domain/repositories/sign_in_repository.dart';
 
 class SignInRepositoryImpl implements SignInRepository {
@@ -10,12 +11,14 @@ class SignInRepositoryImpl implements SignInRepository {
   SignInRepositoryImpl(this.dataSource);
 
   @override
-  Future<Either<Failure, UserModel>> signIn(
+  Future<Either<Failure, UserEntity>> signIn(
       String email, String password) async {
     try {
-      UserModel user = await dataSource.signIn(email, password);
-      return Right(user);
+      // UserModel user = await dataSource.signIn(email, password);
+      UserModel user = await dataSource.signInWithGoogle();
+      return Right(user.toEntity());
     } catch (e) {
+      print(e);
       return Left(AuthFailure());
     }
   }

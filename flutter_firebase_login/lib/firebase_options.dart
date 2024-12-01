@@ -41,13 +41,14 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBD3MQe0RKWhlB3OGVTtXHJzk7F1cLdw0k',
-    appId: '1:847482387989:web:bf0bf413ab57606e5fd81c',
-    messagingSenderId: '847482387989',
-    projectId: 'gallery-app-dam',
-    authDomain: 'gallery-app-dam.firebaseapp.com',
-    storageBucket: 'gallery-app-dam.firebasestorage.app',
-  );
+      apiKey: "AIzaSyBD3MQe0RKWhlB3OGVTtXHJzk7F1cLdw0k",
+      authDomain: "gallery-app-dam.firebaseapp.com",
+      databaseURL:
+          "https://gallery-app-dam-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "gallery-app-dam",
+      storageBucket: "gallery-app-dam.firebasestorage.app",
+      messagingSenderId: "847482387989",
+      appId: "1:847482387989:web:5ac089db8f5870065fd81c");
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCh8Dhm09GYsOBfLNfJrx7y-m8hq4Oxuac',

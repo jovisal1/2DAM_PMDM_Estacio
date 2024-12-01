@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "257468631542",
+    "firebase_url": "https://visitas-app-f670e-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "visitas-app-f670e",
+    "storage_bucket": "visitas-app-f670e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257468631542:android:98b5e8c03cb9998bda5fd7",
+        "android_client_info": {
+          "package_name": "com.visitas.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADAa0uCt3Dsvn_L3dpAZpLTxGZuUbNKJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

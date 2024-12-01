@@ -24,7 +24,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       ));
       result.fold(
         (failure) => emit(LoginState.failure("Fallo al realizar el login")),
-        (_) => emit(LoginState.success(event.email)),
+        (user) => emit(LoginState.success(user.email)),
       );
     });
 
