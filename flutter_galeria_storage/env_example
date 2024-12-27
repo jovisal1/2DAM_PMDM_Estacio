@@ -1,0 +1,38 @@
+# Configuración Web
+WEB_API_KEY=tu-clave-api-web
+WEB_APP_ID=tu-id-de-aplicacion-web
+WEB_MESSAGING_SENDER_ID=tu-id-de-emisor-de-mensajes-web
+WEB_PROJECT_ID=tu-id-de-proyecto-web
+WEB_AUTH_DOMAIN=tu-dominio-de-autenticacion-web
+WEB_STORAGE_BUCKET=tu-bucket-de-almacenamiento-web
+
+# Configuración Android
+ANDROID_API_KEY=tu-clave-api-android
+ANDROID_APP_ID=tu-id-de-aplicacion-android
+ANDROID_MESSAGING_SENDER_ID=tu-id-de-emisor-de-mensajes-android
+ANDROID_PROJECT_ID=tu-id-de-proyecto-android
+ANDROID_STORAGE_BUCKET=tu-bucket-de-almacenamiento-android
+
+# Configuración iOS
+IOS_API_KEY=tu-clave-api-ios
+IOS_APP_ID=tu-id-de-aplicacion-ios
+IOS_MESSAGING_SENDER_ID=tu-id-de-emisor-de-mensajes-ios
+IOS_PROJECT_ID=tu-id-de-proyecto-ios
+IOS_STORAGE_BUCKET=tu-bucket-de-almacenamiento-ios
+IOS_BUNDLE_ID=tu-id-del-paquete-ios
+
+# Configuración macOS
+MACOS_API_KEY=tu-clave-api-macos
+MACOS_APP_ID=tu-id-de-aplicacion-macos
+MACOS_MESSAGING_SENDER_ID=tu-id-de-emisor-de-mensajes-macos
+MACOS_PROJECT_ID=tu-id-de-proyecto-macos
+MACOS_STORAGE_BUCKET=tu-bucket-de-almacenamiento-macos
+MACOS_BUNDLE_ID=tu-id-del-paquete-macos
+
+# Configuración Windows
+WINDOWS_API_KEY=tu-clave-api-windows
+WINDOWS_APP_ID=tu-id-de-aplicacion-windows
+WINDOWS_MESSAGING_SENDER_ID=tu-id-de-emisor-de-mensajes-windows
+WINDOWS_PROJECT_ID=tu-id-de-proyecto-windows
+WINDOWS_AUTH_DOMAIN=tu-dominio-de-autenticacion-windows
+WINDOWS_STORAGE_BUCKET=tu-bucket-de-almacenamiento-windows
